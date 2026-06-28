@@ -36,27 +36,27 @@ const codeLines = [
 const modules = [
   {
     icon: Code2,
-    name: "frontend.engine",
-    summary: "React, Next.js, Vue, dashboards, landing pages, responsive UI, and component systems.",
-    calls: ["composeLayout()", "shipResponsiveUI()", "debugExistingCode()"]
+    name: "Frontend work",
+    summary: "I build React, Next.js, and Vue interfaces for dashboards, landing pages, and product screens.",
+    calls: ["React / Next.js", "Responsive UI", "Bug fixes"]
   },
   {
     icon: WalletCards,
-    name: "web3.runtime",
-    summary: "Solana tools, wallet flows, blockchain data, trading utilities, and smart-contract context.",
-    calls: ["wireWalletFlow()", "parseChainData()", "optimizeRustPath()"]
+    name: "Web3 work",
+    summary: "I can help with Solana tools, wallet flows, blockchain data, and simple trading utilities.",
+    calls: ["Solana", "Wallet flows", "Rust / smart contracts"]
   },
   {
     icon: BrainCircuit,
-    name: "ai.context",
-    summary: "Context engineering, AI-assisted workflows, research automation, and developer tooling.",
-    calls: ["organizeContext()", "buildResearchLoop()", "automateManualWork()"]
+    name: "AI and automation",
+    summary: "I build small tools that organize information, automate research, or remove repeated manual work.",
+    calls: ["AI workflows", "Scraping", "Internal tools"]
   },
   {
     icon: ShoppingBag,
-    name: "commerce.surface",
-    summary: "Shopify pages, product storytelling, store sections, conversion UX, and frontend polish.",
-    calls: ["mapOffer()", "buildStorefront()", "tightenMobileFlow()"]
+    name: "Shopify and ecommerce",
+    summary: "I build and improve Shopify pages, product sections, mobile layouts, and launch pages.",
+    calls: ["Shopify", "Landing pages", "Mobile polish"]
   }
 ];
 
@@ -65,31 +65,31 @@ const repos = [
     name: "awesome-context-engine",
     href: "https://github.com/chefallan/awesome-context-engine",
     type: "AI developer tooling",
-    description: "A context-engineering resource shaped for practical AI-assisted development and reusable technical knowledge.",
-    stack: ["AI", "DX", "Context"],
+    description: "A developer resource about organizing useful context for AI-assisted coding and technical work.",
+    stack: ["AI", "Developer tools", "Docs"],
     status: "public"
   },
   {
     name: "openbean",
     href: "https://github.com/openbean/openbean",
     type: "Open-source product",
-    description: "Open-source product work showing codebase reading, product framing, frontend clarity, and implementation judgment.",
-    stack: ["Product", "Frontend", "OSS"],
+    description: "Open-source product work that shows how I read an existing codebase and explain what matters.",
+    stack: ["Open source", "Product", "Frontend"],
     status: "showcase"
   },
   {
     name: "solana-cli-bot",
     href: "https://github.com/chefallan",
     type: "Blockchain utility",
-    description: "Command-line trading utility work around Solana flows, Rust improvements, and transaction-focused automation.",
+    description: "A command-line trading tool for Solana tasks, with Rust work for faster execution.",
     stack: ["Solana", "Rust", "CLI"],
     status: "project"
   },
   {
-    name: "portfolio-workbench",
+    name: "portfolio-site",
     href: "https://shopify-landing-portfolio.vercel.app/",
     type: "Live portfolio",
-    description: "This deployed workbench: built in Next.js, tuned for full-stack, Web3, AI, and ecommerce project opportunities.",
+    description: "This site, built with Next.js and Tailwind, to show my frontend style and project range.",
     stack: ["Next.js", "Tailwind", "Vercel"],
     status: "live"
   }
@@ -103,10 +103,10 @@ const stackGroups = [
 ];
 
 const workflow = [
-  ["inspect", "Read the brief, repo, product flow, or bug surface before touching implementation."],
-  ["compose", "Turn messy requirements into a workable plan, then build the smallest useful version."],
-  ["ship", "Push reviewable code, test the path, and tighten the UI until it feels intentional."],
-  ["handoff", "Leave clear structure, notes, and next steps so the work can keep moving."]
+  ["read", "I read the brief, repo, product flow, or bug report before changing code."],
+  ["plan", "I turn the request into a small, clear plan and start with the most useful version."],
+  ["build", "I write the code, test the path, and clean up the UI so it feels ready to use."],
+  ["handoff", "I leave clear notes and next steps so the work is easy to continue."]
 ];
 
 export default function Home() {
@@ -186,21 +186,21 @@ export default function Home() {
           <div className="max-w-4xl">
             <p className="inline-flex items-center gap-2 rounded-md border border-emerald-300/24 bg-emerald-300/10 px-3 py-2 font-mono text-xs font-black uppercase text-emerald-200">
               <TerminalSquare size={16} />
-              remote-ready developer portfolio
+              remote developer portfolio
             </p>
             <h1 className="mt-5 max-w-4xl text-4xl font-black leading-[1.02] text-white sm:text-6xl">
-              I build interfaces, tools, and Web3 systems like codebases people can actually maintain.
+              I build web apps, tools, and Web3 features that are easy to use and maintain.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
-              Senior full-stack developer focused on React, Next.js, blockchain apps, AI tooling,
-              automation, Shopify/ecommerce pages, and fast project-based delivery.
+              I am a senior full-stack developer focused on React, Next.js, blockchain apps, AI tools,
+              automation, Shopify pages, and project-based work.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 href="#repos"
                 className="inline-flex items-center gap-2 rounded-md bg-emerald-300 px-5 py-3 font-mono text-sm font-black text-[#08100d] shadow-[6px_6px_0_rgba(231,168,59,0.55)] transition hover:-translate-y-0.5"
               >
-                inspect repos
+                view projects
                 <ArrowRight size={18} />
               </Link>
               <Link
@@ -208,7 +208,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 rounded-md border border-white/18 bg-white/8 px-5 py-3 font-mono text-sm font-black text-white hover:bg-white/12"
               >
                 <Mail size={18} />
-                start contract
+                contact me
               </Link>
             </div>
           </div>
@@ -239,13 +239,13 @@ export default function Home() {
       <section id="modules" className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
           <div>
-            <p className="font-mono text-xs font-black uppercase text-emerald-200">./modules</p>
+            <p className="font-mono text-xs font-black uppercase text-emerald-200">what I do</p>
             <h2 className="mt-3 text-3xl font-black leading-tight text-white sm:text-5xl">
-              Coding-focused work surfaces.
+              I write code for real product work.
             </h2>
             <p className="mt-4 max-w-xl text-base leading-7 text-white/62">
-              This is the work I am useful for: taking product intent and turning it into interfaces,
-              integrations, scripts, workflows, and commits that survive the next developer.
+              I help with frontend work, Web3 features, AI tools, automation, and Shopify pages.
+              The goal is simple: useful code, clean UI, and work that another developer can continue.
             </p>
           </div>
           <div className="grid gap-3 md:grid-cols-2">
@@ -278,9 +278,9 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="font-mono text-xs font-black uppercase text-[#facc15]">git status --short</p>
+              <p className="font-mono text-xs font-black uppercase text-[#facc15]">projects</p>
               <h2 className="mt-3 text-3xl font-black leading-tight text-white sm:text-5xl">
-                Selected repos and project surfaces.
+                Selected projects.
               </h2>
             </div>
             <Link href="https://github.com/chefallan" className="inline-flex w-fit items-center gap-2 rounded-md border border-white/12 px-4 py-3 font-mono text-sm font-black text-white hover:bg-white/8">
@@ -323,13 +323,13 @@ export default function Home() {
       <section id="stack" className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <p className="font-mono text-xs font-black uppercase text-emerald-200">package.json</p>
+            <p className="font-mono text-xs font-black uppercase text-emerald-200">tech stack</p>
             <h2 className="mt-3 text-3xl font-black leading-tight text-white sm:text-5xl">
-              Stack reads like a build file.
+              Tools I use often.
             </h2>
             <p className="mt-4 max-w-xl text-base leading-7 text-white/62">
-              I am not trying to look like a one-tool specialist. I work where frontend,
-              integration, automation, and product judgment overlap.
+              I work across frontend, blockchain, automation, and ecommerce. I use the tool that fits
+              the job instead of forcing every project into one stack.
             </p>
           </div>
           <div className="rounded-md border border-white/10 bg-[#0d1518] p-4 font-mono shadow-[10px_10px_0_rgba(125,211,252,0.08)]">
@@ -358,9 +358,9 @@ export default function Home() {
       <section className="border-y border-white/10 bg-[#10181b] py-14">
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
           <div>
-            <p className="font-mono text-xs font-black uppercase text-[#facc15]">workflow.log</p>
+            <p className="font-mono text-xs font-black uppercase text-[#facc15]">how I work</p>
             <h2 className="mt-3 text-3xl font-black leading-tight text-white sm:text-5xl">
-              How I move through a task.
+              How I handle a task.
             </h2>
           </div>
           <div className="grid gap-3">
@@ -380,13 +380,13 @@ export default function Home() {
         <div className="rounded-md border border-emerald-300/20 bg-emerald-300/8 p-5 sm:p-7">
           <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
-              <p className="font-mono text-xs font-black uppercase text-emerald-200">ready when you are</p>
+              <p className="font-mono text-xs font-black uppercase text-emerald-200">available remotely</p>
               <h2 className="mt-3 text-3xl font-black leading-tight text-white sm:text-5xl">
-                Need a remote developer for a focused build?
+                Need a developer for a focused build?
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-7 text-white/66">
-                Best fit: full-stack features, frontend fixes, Web3 prototypes, AI tooling,
-                automation scripts, Shopify pages, and product demos that need to feel real quickly.
+                I am a good fit for full-stack features, frontend fixes, Web3 prototypes, AI tools,
+                automation scripts, Shopify pages, and product demos.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">

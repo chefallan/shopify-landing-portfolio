@@ -105,11 +105,13 @@ const stackGroups = [
   ["deployment", ["Vercel", "GitHub", "CI checks", "Env setup", "Production builds"]]
 ];
 
-const workflow = [
-  ["read", "I read the brief, repo, product flow, or bug report before changing code."],
-  ["plan", "I turn the request into a small, clear plan and start with the most useful version."],
-  ["build", "I write the code, test the path, and clean up the UI so it feels ready to use."],
-  ["handoff", "I leave clear notes and next steps so the work is easy to continue."]
+const hireOptions = [
+  ["Frontend fix or build", "React, Next.js, Vue, dashboards, landing pages, responsive cleanup."],
+  ["Backend feature", "APIs, auth flows, webhooks, integrations, database work, and server-side logic."],
+  ["Web3 prototype", "Wallet flows, Solana tools, smart-contract app screens, and blockchain data UI."],
+  ["Automation tool", "Scraping, internal tools, AI-assisted workflows, data cleanup, and repeat-task removal."],
+  ["Shopify page", "Product pages, landing pages, mobile polish, store sections, and launch support."],
+  ["Codebase help", "Bug fixes, refactors, reviewable pull requests, and practical handoff notes."]
 ];
 
 export default function Home() {
@@ -359,20 +361,32 @@ export default function Home() {
       </section>
 
       <section className="border-y border-white/10 bg-[#10181b] py-14">
-        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8">
           <div>
-            <p className="font-mono text-xs font-black uppercase text-[#facc15]">how I work</p>
+            <p className="font-mono text-xs font-black uppercase text-[#facc15]">hire me for</p>
             <h2 className="mt-3 text-3xl font-black leading-tight text-white sm:text-5xl">
-              How I handle a task.
+              Clear project work I can take on remotely.
             </h2>
+            <p className="mt-4 max-w-xl text-base leading-7 text-white/62">
+              If you need someone to build, fix, or finish a technical feature, these are the kinds
+              of projects I can help with.
+            </p>
+            <Link
+              href="mailto:catayoc.allanbrando@gmail.com?subject=Remote%20developer%20project"
+              className="mt-6 inline-flex items-center gap-2 rounded-md bg-emerald-300 px-5 py-3 font-mono text-sm font-black text-[#08100d]"
+            >
+              <Mail size={18} />
+              email me about a project
+            </Link>
           </div>
-          <div className="grid gap-3">
-            {workflow.map(([command, text], index) => (
-              <div key={command} className="grid gap-3 rounded-md border border-white/10 bg-black/20 p-4 sm:grid-cols-[7rem_1fr]">
-                <p className="font-mono text-sm font-black text-emerald-200">
-                  {String(index + 1).padStart(2, "0")}:{command}
+          <div className="grid gap-3 md:grid-cols-2">
+            {hireOptions.map(([title, text], index) => (
+              <div key={title} className="rounded-md border border-white/10 bg-black/20 p-4">
+                <p className="font-mono text-xs font-black text-emerald-200">
+                  {String(index + 1).padStart(2, "0")}
                 </p>
-                <p className="text-sm leading-6 text-white/66">{text}</p>
+                <h3 className="mt-3 text-lg font-black text-white">{title}</h3>
+                <p className="mt-2 text-sm leading-6 text-white/66">{text}</p>
               </div>
             ))}
           </div>

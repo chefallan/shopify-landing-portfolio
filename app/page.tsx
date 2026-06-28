@@ -27,7 +27,7 @@ const codeLines = [
   ["01", "const developer = {"],
   ["02", "  name: 'Allan Catayoc',"],
   ["03", "  role: 'Senior Full-Stack Developer',"],
-  ["04", "  focus: ['React', 'Next.js', 'Web3', 'AI tools', 'Shopify'],"],
+  ["04", "  focus: ['frontend', 'backend', 'web3', 'ai tools', 'shopify'],"],
   ["05", "  mode: ['remote', 'part-time', 'project-based'],"],
   ["06", "  ships: 'usable products, not just screens'"],
   ["07", "};"]
@@ -97,9 +97,12 @@ const repos = [
 
 const stackGroups = [
   ["frontend", ["React", "Next.js", "Vue", "Vite", "TypeScript", "Tailwind"]],
+  ["backend", ["Node.js", "REST APIs", "Auth flows", "Server actions", "Webhooks", "Integrations"]],
+  ["database", ["PostgreSQL", "Prisma", "Drizzle", "SQL", "Data modeling", "Migrations"]],
   ["blockchain", ["Solana", "Rust", "Solidity", "Move", "Ethers.js", "Web3.js"]],
-  ["delivery", ["Node.js", "APIs", "GitHub", "Automation", "Scraping", "Vercel"]],
-  ["commerce", ["Shopify", "WordPress", "Landing pages", "UX QA", "Responsive polish"]]
+  ["automation", ["Scraping", "Internal tools", "AI workflows", "Data cleanup", "Scheduled jobs"]],
+  ["commerce", ["Shopify", "WordPress", "Landing pages", "UX QA", "Responsive polish"]],
+  ["deployment", ["Vercel", "GitHub", "CI checks", "Env setup", "Production builds"]]
 ];
 
 const workflow = [
@@ -325,11 +328,11 @@ export default function Home() {
           <div>
             <p className="font-mono text-xs font-black uppercase text-emerald-200">tech stack</p>
             <h2 className="mt-3 text-3xl font-black leading-tight text-white sm:text-5xl">
-              Tools I use often.
+              Full-stack tools I use often.
             </h2>
             <p className="mt-4 max-w-xl text-base leading-7 text-white/62">
-              I work across frontend, blockchain, automation, and ecommerce. I use the tool that fits
-              the job instead of forcing every project into one stack.
+              I work across frontend, backend, databases, blockchain, automation, and deployment.
+              The exact stack depends on the job, but these are the areas I can cover.
             </p>
           </div>
           <div className="rounded-md border border-white/10 bg-[#0d1518] p-4 font-mono shadow-[10px_10px_0_rgba(125,211,252,0.08)]">

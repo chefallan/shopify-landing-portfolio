@@ -3,132 +3,135 @@ import Link from "next/link";
 import {
   ArrowRight,
   Bot,
+  Braces,
   BrainCircuit,
   Code2,
   DatabaseZap,
   Github,
-  Globe2,
-  LayoutDashboard,
+  Layers3,
   Mail,
   Network,
+  RadioTower,
   Rocket,
   ShieldCheck,
   ShoppingBag,
-  Sparkles,
   TerminalSquare,
-  WalletCards
+  WalletCards,
+  Workflow
 } from "lucide-react";
 
-const focusAreas = [
+const operatingModes = [
+  ["01", "Product UI", "Interfaces, dashboards, landing pages, ecommerce flows, and frontend polish."],
+  ["02", "Web3 systems", "Solana tools, wallet-aware UX, blockchain data, trading utilities, and contract context."],
+  ["03", "AI tooling", "Context engines, automation, research helpers, scraping flows, and developer productivity."],
+  ["04", "Codebase support", "Debugging, refactoring, implementation help, reviews, and handoff-friendly changes."]
+];
+
+const caseFiles = [
   {
-    icon: Code2,
-    title: "Full-stack product builds",
-    text: "Frontend, backend, APIs, dashboards, data flows, integrations, and production-minded application structure."
+    icon: BrainCircuit,
+    title: "Awesome Context Engine",
+    label: "AI tooling",
+    href: "https://github.com/chefallan/awesome-context-engine",
+    signal: "Turns scattered engineering context into a reusable resource for AI-assisted development.",
+    role: "Curation, technical structure, developer-experience thinking",
+    stack: ["AI workflows", "Docs", "Developer tools"]
+  },
+  {
+    icon: Layers3,
+    title: "OpenBean",
+    label: "Open-source product",
+    href: "https://github.com/openbean/openbean",
+    signal: "Shows how I read product codebases, identify useful presentation angles, and connect implementation to UX.",
+    role: "Codebase understanding, product framing, frontend judgment",
+    stack: ["Open source", "Product UI", "Frontend"]
   },
   {
     icon: WalletCards,
-    title: "Blockchain and Web3",
-    text: "Solana tools, wallet flows, smart-contract context, blockchain data, trading utilities, and web3 product interfaces."
-  },
-  {
-    icon: BrainCircuit,
-    title: "AI and automation",
-    text: "AI-assisted workflows, context engines, scraping utilities, research automation, and developer productivity systems."
+    title: "CLI Solana Trading Bot",
+    label: "Blockchain utility",
+    href: "https://github.com/chefallan",
+    signal: "Fast command-line workflow for Solana trading tasks, with Rust-focused performance improvements.",
+    role: "Blockchain tooling, transaction flow thinking, implementation",
+    stack: ["Solana", "Rust", "CLI"]
   },
   {
     icon: ShoppingBag,
-    title: "Ecommerce and Shopify",
-    text: "Conversion-focused landing pages, storefront sections, responsive product pages, and theme-aware frontend implementation."
-  }
-];
-
-const selectedProjects = [
-  {
-    title: "Awesome Context Engine",
-    type: "AI developer tooling",
-    href: "https://github.com/chefallan/awesome-context-engine",
-    text: "A curated technical project around context engineering, useful AI workflows, and practical developer knowledge systems.",
-    tags: ["AI", "Developer tools", "Context engineering"]
-  },
-  {
-    title: "OpenBean",
-    type: "Open-source product showcase",
-    href: "https://github.com/openbean/openbean",
-    text: "Open-source product work used to demonstrate codebase reading, product thinking, frontend clarity, and technical presentation.",
-    tags: ["Open source", "Product", "Frontend"]
-  },
-  {
-    title: "CLI Solana Trading Bot",
-    type: "Blockchain utility",
-    href: "https://github.com/chefallan",
-    text: "A fast Solana trading utility with Rust improvements, transaction-focused workflows, and practical blockchain automation.",
-    tags: ["Solana", "Rust", "CLI"]
-  },
-  {
-    title: "Shopify Landing Portfolio",
-    type: "Ecommerce frontend",
+    title: "Commerce Launch Surface",
+    label: "Shopify and frontend",
     href: "https://shopify-landing-portfolio.vercel.app/",
-    text: "This portfolio began as a Shopify landing-page proof and now shows broader technical range for remote contract work.",
-    tags: ["Next.js", "Shopify", "UX"]
+    signal: "A live portfolio surface for conversion-focused pages, store sections, and responsive launch work.",
+    role: "UX hierarchy, Next.js build, responsive presentation",
+    stack: ["Next.js", "Shopify", "UX"]
   }
 ];
 
-const stack = [
-  "React",
-  "Next.js",
-  "Vue",
-  "Vite",
-  "Node.js",
-  "TypeScript",
-  "JavaScript",
-  "HTML/CSS",
-  "Solidity",
-  "Rust",
-  "Move",
-  "Solana",
-  "Ethers.js",
-  "Web3.js",
-  "Shopify",
-  "WordPress",
-  "GitHub",
-  "Automation"
+const capabilities = [
+  {
+    icon: Code2,
+    title: "Build",
+    items: ["React and Next.js interfaces", "API-connected product screens", "Responsive dashboards", "Clean component structure"]
+  },
+  {
+    icon: Workflow,
+    title: "Connect",
+    items: ["Wallet and payment flows", "Third-party integrations", "Automation scripts", "Scraping and data tools"]
+  },
+  {
+    icon: Braces,
+    title: "Shape",
+    items: ["Landing-page strategy", "Frontend QA", "Design-to-code handoff", "Existing codebase cleanup"]
+  },
+  {
+    icon: ShieldCheck,
+    title: "Stabilize",
+    items: ["Bug investigation", "Practical refactors", "Performance-aware UI", "Reviewable Git changes"]
+  }
 ];
 
-const services = [
-  ["Product landing pages", "Launch pages for SaaS, ecommerce, Web3, AI tools, and service offers."],
-  ["Frontend implementation", "Responsive UI builds, component cleanup, app screens, dashboards, and design-to-code support."],
-  ["Technical prototypes", "Fast MVPs, proof-of-concept tools, API integrations, blockchain flows, and automation scripts."],
-  ["Codebase rescue", "Debugging, refactoring, performance cleanup, implementation support, and practical engineering handoff."]
+const stackRows = [
+  ["Frontend", "React", "Next.js", "Vue", "Vite", "TypeScript", "Tailwind"],
+  ["Web3", "Solana", "Rust", "Solidity", "Move", "Ethers.js", "Web3.js"],
+  ["Product ops", "Shopify", "WordPress", "GitHub", "Automation", "Scraping", "APIs"]
 ];
 
-const metrics = [
-  ["Senior", "full-stack developer"],
-  ["Web2/Web3", "product experience"],
-  ["Remote", "part-time or project-based"],
-  ["GitHub", "github.com/chefallan"]
+const availability = [
+  "Remote",
+  "Part-time",
+  "Project-based",
+  "Frontend polish",
+  "Full-stack features",
+  "Web3 prototypes",
+  "AI tooling",
+  "Shopify pages"
 ];
 
 export default function Home() {
   return (
-    <main className="bg-paper text-ink">
-      <header className="sticky top-0 z-30 border-b border-ink/10 bg-paper/92 backdrop-blur">
-        <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4">
-          <Link href="/" className="flex items-center gap-2 text-base font-black text-ink">
-            <span className="grid size-9 place-items-center rounded-lg bg-lagoon text-sm text-white">AC</span>
-            Allan Catayoc
+    <main className="min-h-screen bg-paper text-ink">
+      <header className="sticky top-0 z-40 border-b border-ink/10 bg-paper/90 backdrop-blur">
+        <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+          <Link href="/" className="group flex items-center gap-3">
+            <span className="grid size-10 place-items-center rounded-lg border border-ink bg-ink text-sm font-black text-white shadow-[4px_4px_0_#e7a83b] transition group-hover:-translate-y-0.5">
+              AC
+            </span>
+            <span>
+              <span className="block text-sm font-black leading-none">Allan Catayoc</span>
+              <span className="mt-1 block text-xs font-bold uppercase text-ink/50">builder / full-stack / web3</span>
+            </span>
           </Link>
-          <nav className="hidden items-center gap-2 md:flex">
-            <Link href="#work" className="rounded-lg px-3 py-2 text-sm font-bold text-ink/70 hover:bg-white hover:text-ink">
-              Work
+          <nav className="hidden items-center gap-1 md:flex">
+            <Link href="#case-files" className="rounded-lg px-3 py-2 text-sm font-bold text-ink/68 hover:bg-white hover:text-ink">
+              Case files
             </Link>
-            <Link href="#services" className="rounded-lg px-3 py-2 text-sm font-bold text-ink/70 hover:bg-white hover:text-ink">
-              Services
+            <Link href="#capabilities" className="rounded-lg px-3 py-2 text-sm font-bold text-ink/68 hover:bg-white hover:text-ink">
+              Capabilities
             </Link>
-            <Link href="https://github.com/chefallan" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-bold text-ink/70 hover:bg-white hover:text-ink">
+            <Link href="https://github.com/chefallan" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-bold text-ink/68 hover:bg-white hover:text-ink">
               <Github size={17} />
               GitHub
             </Link>
-            <Link href="mailto:catayoc.allanbrando@gmail.com?subject=Portfolio%20project%20inquiry" className="inline-flex items-center gap-2 rounded-lg bg-ink px-4 py-2 text-sm font-black text-white">
+            <Link href="mailto:catayoc.allanbrando@gmail.com?subject=Remote%20portfolio%20project" className="inline-flex items-center gap-2 rounded-lg bg-clay px-4 py-2 text-sm font-black text-white shadow-[3px_3px_0_#17201d]">
               <Mail size={17} />
               Contact
             </Link>
@@ -136,7 +139,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="relative min-h-[88vh] overflow-hidden">
+      <section className="relative min-h-[88vh] overflow-hidden border-b border-ink/10">
         <Image
           src="/shopify/portfolio-hero.png"
           alt="Layered product interfaces for full-stack, AI, Web3, and ecommerce portfolio work"
@@ -145,197 +148,244 @@ export default function Home() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/72 to-ink/12" />
-        <div className="relative mx-auto flex min-h-[88vh] w-full max-w-6xl flex-col justify-end px-4 pb-12 pt-24 sm:px-6 lg:px-8">
-          <p className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-xs font-black uppercase text-marigold backdrop-blur">
-            <Sparkles size={16} />
-            Senior full-stack developer for remote projects
-          </p>
-          <h1 className="mt-5 max-w-3xl text-4xl font-black leading-tight text-white sm:text-6xl">
-            I build practical web products across full-stack, AI, Web3, and ecommerce.
-          </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-white/82 sm:text-lg">
-            I help teams turn rough ideas, technical briefs, or existing codebases into usable
-            interfaces, working prototypes, launch pages, automations, and blockchain-aware product
-            experiences.
-          </p>
-          <div className="mt-7 flex flex-wrap gap-3">
-            <Link
-              href="#work"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-sm font-black text-ink shadow-soft"
-            >
-              View selected work
-              <ArrowRight size={18} />
-            </Link>
-            <Link
-              href="mailto:catayoc.allanbrando@gmail.com?subject=Remote%20project%20inquiry"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/35 bg-white/10 px-5 py-3 text-sm font-black text-white backdrop-blur"
-            >
-              <Mail size={18} />
-              Start a project
-            </Link>
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#17201d_0%,rgba(23,32,29,0.9)_35%,rgba(23,32,29,0.45)_68%,rgba(23,32,29,0.08)_100%)]" />
+        <div className="relative mx-auto grid min-h-[88vh] w-full max-w-7xl content-end gap-8 px-4 pb-10 pt-24 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(24rem,0.55fr)] lg:px-8">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-xs font-black uppercase tracking-normal text-marigold backdrop-blur">
+              <RadioTower size={16} />
+              Available for remote product work
+            </div>
+            <h1 className="mt-5 text-4xl font-black leading-[1.02] text-white sm:text-6xl">
+              Senior builder for the strange middle between idea, interface, and working code.
+            </h1>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
+              I help teams ship practical web products: full-stack features, Web3 flows, AI tooling,
+              automation, ecommerce surfaces, and the UI polish that makes technical work feel usable.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link
+                href="#case-files"
+                className="inline-flex items-center gap-2 rounded-lg bg-marigold px-5 py-3 text-sm font-black text-ink shadow-[5px_5px_0_rgba(255,255,255,0.22)] transition hover:-translate-y-0.5"
+              >
+                Open case files
+                <ArrowRight size={18} />
+              </Link>
+              <Link
+                href="mailto:catayoc.allanbrando@gmail.com?subject=Remote%20project%20inquiry"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/35 bg-white/10 px-5 py-3 text-sm font-black text-white backdrop-blur transition hover:bg-white/16"
+              >
+                <Mail size={18} />
+                Start a project
+              </Link>
+            </div>
           </div>
+
+          <aside className="rounded-lg border border-white/18 bg-ink/74 p-4 text-white shadow-soft backdrop-blur">
+            <div className="flex items-center justify-between border-b border-white/12 pb-3">
+              <p className="text-xs font-black uppercase text-white/54">current signal</p>
+              <span className="rounded bg-moss px-2 py-1 text-xs font-black text-white">online</span>
+            </div>
+            <div className="mt-4 grid gap-3">
+              {[
+                ["Role", "Senior full-stack developer"],
+                ["Focus", "AI, Web3, ecommerce, automation"],
+                ["Mode", "Remote / part-time / project"],
+                ["GitHub", "github.com/chefallan"]
+              ].map(([label, value]) => (
+                <div key={label} className="grid grid-cols-[5rem_1fr] gap-3 border-b border-white/10 pb-3 last:border-b-0 last:pb-0">
+                  <span className="text-xs font-black uppercase text-marigold">{label}</span>
+                  <span className="text-sm font-semibold leading-5 text-white/86">{value}</span>
+                </div>
+              ))}
+            </div>
+          </aside>
         </div>
       </section>
 
       <section className="border-b border-ink/10 bg-white">
-        <div className="mx-auto grid w-full max-w-6xl gap-3 px-4 py-6 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
-          {metrics.map(([label, text]) => (
-            <div key={label} className="rounded-lg border border-ink/10 bg-paper p-4">
-              <p className="text-xl font-black text-lagoon">{label}</p>
-              <p className="mt-1 text-sm font-semibold text-ink/62">{text}</p>
+        <div className="mx-auto grid w-full max-w-7xl px-4 py-3 sm:px-6 lg:grid-cols-4 lg:px-8">
+          {operatingModes.map(([number, title, text]) => (
+            <div key={number} className="border-ink/10 py-5 lg:border-r lg:px-5 lg:first:pl-0 lg:last:border-r-0">
+              <p className="text-xs font-black text-clay">{number}</p>
+              <h2 className="mt-2 text-lg font-black">{title}</h2>
+              <p className="mt-2 text-sm leading-6 text-ink/62">{text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
-          <p className="text-sm font-black uppercase text-clay">What I can cover</p>
-          <h2 className="mt-3 text-3xl font-black text-ink sm:text-4xl">
-            Broad enough for messy product work, focused enough to ship.
-          </h2>
-        </div>
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
-          {focusAreas.map((area) => {
-            const Icon = area.icon;
-
-            return (
-              <article key={area.title} className="rounded-lg border border-ink/10 bg-white p-5 shadow-sm">
-                <Icon className="text-lagoon" size={28} />
-                <h3 className="mt-4 text-xl font-black">{area.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-ink/68">{area.text}</p>
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      <section id="work" className="bg-ink py-12 text-white">
-        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-2xl">
-              <p className="text-sm font-black uppercase text-marigold">Selected projects</p>
-              <h2 className="mt-3 text-3xl font-black sm:text-4xl">
-                A compact view of AI, Web3, open-source, and frontend work.
-              </h2>
-            </div>
-            <Link href="https://github.com/chefallan" className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/18 px-4 py-3 text-sm font-black text-white">
-              <Github size={18} />
-              More on GitHub
-            </Link>
+      <section id="case-files" className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[0.72fr_1fr]">
+          <div className="lg:sticky lg:top-24 lg:h-fit">
+            <p className="inline-flex items-center gap-2 rounded-lg bg-field px-3 py-2 text-xs font-black uppercase text-clay">
+              <TerminalSquare size={16} />
+              Case files
+            </p>
+            <h2 className="mt-4 max-w-xl text-3xl font-black leading-tight sm:text-5xl">
+              Proof without pretending every project is the same shape.
+            </h2>
+            <p className="mt-4 max-w-lg text-base leading-7 text-ink/66">
+              The point is range: some work is product-facing, some is infrastructure-adjacent, and
+              some is developer tooling. I like the handoff zone where those overlap.
+            </p>
           </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {selectedProjects.map((project) => (
-              <Link
-                key={project.title}
-                href={project.href}
-                className="group rounded-lg border border-white/12 bg-white/[0.07] p-5 transition hover:bg-white/[0.11]"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-xs font-black uppercase text-marigold">{project.type}</p>
-                    <h3 className="mt-2 text-2xl font-black">{project.title}</h3>
+
+          <div className="grid gap-4">
+            {caseFiles.map((project, index) => {
+              const Icon = project.icon;
+
+              return (
+                <Link
+                  key={project.title}
+                  href={project.href}
+                  className="group grid gap-5 rounded-lg border border-ink/12 bg-white p-5 shadow-[6px_6px_0_#f7f2ea] transition hover:-translate-y-0.5 hover:shadow-[8px_8px_0_#e7a83b] md:grid-cols-[4.5rem_1fr]"
+                >
+                  <div className="flex items-center justify-between md:block">
+                    <div className="grid size-14 place-items-center rounded-lg bg-ink text-white">
+                      <Icon size={26} />
+                    </div>
+                    <span className="text-xs font-black text-ink/35 md:mt-6 md:block">{String(index + 1).padStart(2, "0")}</span>
                   </div>
-                  <ArrowRight className="mt-1 shrink-0 text-white/50 transition group-hover:translate-x-1 group-hover:text-white" size={22} />
-                </div>
-                <p className="mt-4 text-sm leading-6 text-white/72">{project.text}</p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="rounded-lg bg-white/10 px-3 py-1 text-xs font-bold text-white/78">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </Link>
-            ))}
+                  <div>
+                    <div className="flex flex-wrap items-start justify-between gap-3">
+                      <div>
+                        <p className="text-xs font-black uppercase text-lagoon">{project.label}</p>
+                        <h3 className="mt-1 text-2xl font-black">{project.title}</h3>
+                      </div>
+                      <ArrowRight className="text-ink/36 transition group-hover:translate-x-1 group-hover:text-clay" size={22} />
+                    </div>
+                    <p className="mt-4 text-sm font-bold uppercase text-ink/45">Signal</p>
+                    <p className="mt-1 text-sm leading-6 text-ink/70">{project.signal}</p>
+                    <p className="mt-4 text-sm font-bold uppercase text-ink/45">Role</p>
+                    <p className="mt-1 text-sm leading-6 text-ink/70">{project.role}</p>
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {project.stack.map((item) => (
+                        <span key={item} className="rounded-lg border border-ink/10 bg-paper px-3 py-1 text-xs font-black text-ink/66">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section id="services" className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
-        <div>
-          <p className="text-sm font-black uppercase text-lagoon">Project support</p>
-          <h2 className="mt-3 text-3xl font-black">Useful for part-time, contract, and project-based work.</h2>
-          <p className="mt-4 text-base leading-7 text-ink/68">
-            I’m comfortable joining a project where requirements are still forming, the codebase is
-            already moving, or the first goal is a polished proof that helps someone make a decision.
-          </p>
-        </div>
-        <div className="grid gap-3">
-          {services.map(([title, text], index) => (
-            <div key={title} className="grid gap-3 rounded-lg border border-ink/10 bg-white p-4 sm:grid-cols-[3.5rem_1fr]">
-              <div className="grid size-11 place-items-center rounded-lg bg-field text-sm font-black text-ink">
-                {String(index + 1).padStart(2, "0")}
-              </div>
-              <div>
-                <h3 className="font-black text-ink">{title}</h3>
-                <p className="mt-1 text-sm leading-6 text-ink/68">{text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="border-y border-ink/10 bg-white py-12">
-        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section id="capabilities" className="border-y border-ink/10 bg-ink py-14 text-white">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <p className="text-sm font-black uppercase text-clay">Technical stack</p>
-              <h2 className="mt-3 text-3xl font-black">Tools I use to move from idea to usable product.</h2>
+              <p className="inline-flex items-center gap-2 rounded-lg border border-white/14 px-3 py-2 text-xs font-black uppercase text-marigold">
+                <Network size={16} />
+                Capability lanes
+              </p>
+              <h2 className="mt-4 text-3xl font-black leading-tight sm:text-5xl">
+                What I actually do when a project gets real.
+              </h2>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {stack.map((item) => (
-                <span key={item} className="rounded-lg border border-ink/10 bg-paper px-3 py-2 text-sm font-bold text-ink/75">
-                  {item}
-                </span>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {capabilities.map((capability) => {
+                const Icon = capability.icon;
+
+                return (
+                  <article key={capability.title} className="rounded-lg border border-white/12 bg-white/[0.07] p-5">
+                    <Icon className="text-marigold" size={27} />
+                    <h3 className="mt-4 text-xl font-black">{capability.title}</h3>
+                    <ul className="mt-4 grid gap-2">
+                      {capability.items.map((item) => (
+                        <li key={item} className="flex gap-2 text-sm leading-6 text-white/76">
+                          <span className="mt-2 size-1.5 shrink-0 rounded-full bg-clay" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
+          <div>
+            <p className="inline-flex items-center gap-2 rounded-lg bg-white px-3 py-2 text-xs font-black uppercase text-lagoon">
+              <DatabaseZap size={16} />
+              Stack map
+            </p>
+            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-5xl">
+              Familiar tools, used for practical outcomes.
+            </h2>
+          </div>
+          <div className="rounded-lg border border-ink/12 bg-white p-4 shadow-[6px_6px_0_#e7a83b]">
+            <div className="flex gap-2 border-b border-ink/10 pb-3">
+              <span className="size-3 rounded-full bg-clay" />
+              <span className="size-3 rounded-full bg-marigold" />
+              <span className="size-3 rounded-full bg-moss" />
+            </div>
+            <div className="mt-4 grid gap-4 font-mono text-sm">
+              {stackRows.map(([group, ...items]) => (
+                <div key={group}>
+                  <p className="text-xs font-black uppercase text-clay">./{group.toLowerCase().replace(" ", "-")}</p>
+                  <p className="mt-2 leading-6 text-ink/74">
+                    {items.map((item, index) => (
+                      <span key={item}>
+                        <span className="font-bold text-ink">{item}</span>
+                        {index < items.length - 1 ? <span className="text-ink/30"> + </span> : null}
+                      </span>
+                    ))}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto grid w-full max-w-6xl gap-5 px-4 py-12 sm:px-6 md:grid-cols-3 lg:px-8">
-        {[
-          [TerminalSquare, "Implementation", "Clean components, stable layouts, practical integrations, and code that another developer can continue."],
-          [DatabaseZap, "Automation", "Scrapers, data workflows, APIs, and internal tools that reduce repeated manual work."],
-          [Network, "Systems thinking", "Enough product, research, and infrastructure context to connect UI choices to real technical constraints."],
-          [LayoutDashboard, "Interface polish", "Responsive hierarchy, spacing, state handling, dashboards, storefronts, and launch-ready pages."],
-          [Bot, "AI workflows", "Context organization, prompt-aware tooling, AI-assisted research, and practical productivity experiments."],
-          [ShieldCheck, "Reliability", "Debugging discipline, Git hygiene, reviewable changes, and careful work inside existing projects."]
-        ].map(([Icon, title, text]) => {
-          const TypedIcon = Icon as typeof Code2;
-
-          return (
-            <article key={String(title)} className="rounded-lg border border-ink/10 bg-white p-5 shadow-sm">
-              <TypedIcon className="text-clay" size={26} />
-              <h3 className="mt-4 text-lg font-black">{String(title)}</h3>
-              <p className="mt-2 text-sm leading-6 text-ink/68">{String(text)}</p>
-            </article>
-          );
-        })}
-      </section>
-
-      <section className="bg-lagoon py-12 text-white">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-          <div className="max-w-2xl">
-            <p className="flex items-center gap-2 text-sm font-black uppercase text-marigold">
-              <Globe2 size={18} />
-              Remote collaboration
+      <section className="border-t border-ink/10 bg-white py-14">
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <div>
+            <p className="inline-flex items-center gap-2 rounded-lg bg-field px-3 py-2 text-xs font-black uppercase text-clay">
+              <Bot size={16} />
+              Fit
             </p>
-            <h2 className="mt-3 text-3xl font-black">Available for remote part-time and project-based work.</h2>
-            <p className="mt-3 text-sm leading-6 text-white/76">
-              Best fit: full-stack features, frontend polish, Shopify/ecommerce pages, AI tooling,
-              Web3 interfaces, automation, and fast product prototypes.
-            </p>
+            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-5xl">
+              Best when the task needs both speed and judgment.
+            </h2>
           </div>
-          <Link
-            href="mailto:catayoc.allanbrando@gmail.com?subject=Remote%20portfolio%20project"
-            className="inline-flex w-fit items-center gap-2 rounded-lg bg-white px-5 py-3 text-sm font-black text-ink"
-          >
-            Contact Allan
-            <Rocket size={18} />
-          </Link>
+          <div>
+            <div className="flex flex-wrap gap-2">
+              {availability.map((item) => (
+                <span key={item} className="rounded-lg border border-ink/10 bg-paper px-3 py-2 text-sm font-black text-ink/72">
+                  {item}
+                </span>
+              ))}
+            </div>
+            <p className="mt-6 text-base leading-7 text-ink/66">
+              I am comfortable taking a rough brief, asking the right questions, shipping a first
+              useful version, and tightening it until it feels like something a client or user can
+              actually trust.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link
+                href="mailto:catayoc.allanbrando@gmail.com?subject=Remote%20portfolio%20project"
+                className="inline-flex items-center gap-2 rounded-lg bg-ink px-5 py-3 text-sm font-black text-white shadow-[5px_5px_0_#e7a83b]"
+              >
+                Contact Allan
+                <Rocket size={18} />
+              </Link>
+              <Link
+                href="https://github.com/chefallan"
+                className="inline-flex items-center gap-2 rounded-lg border border-ink/14 bg-white px-5 py-3 text-sm font-black text-ink"
+              >
+                <Github size={18} />
+                View GitHub
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>

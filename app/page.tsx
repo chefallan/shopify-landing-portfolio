@@ -87,7 +87,7 @@ const repos = [
   },
   {
     name: "portfolio-site",
-    href: "https://shopify-landing-portfolio.vercel.app/",
+    href: "https://www.chefallan.xyz/",
     type: "Live portfolio",
     description: "This site, built with Next.js and Tailwind, to show my frontend style and project range.",
     stack: ["Next.js", "Tailwind", "Vercel"],

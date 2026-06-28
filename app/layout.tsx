@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Shopify Landing Pages | Allan Brando Catayoc",
+  title: "Allan Brando Catayoc | Full-Stack, AI, Web3 Portfolio",
   description:
-    "Shopify storefront, ecommerce landing page, and conversion-focused frontend portfolio by Allan Brando Catayoc."
+    "Senior full-stack developer portfolio covering AI tooling, Web3 products, ecommerce frontend, automation, and remote project work."
 };
 
 export default function RootLayout({

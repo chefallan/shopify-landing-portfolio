@@ -1,6 +1,6 @@
-# Shopify Landing Portfolio
+# Allan Brando Catayoc Portfolio
 
-Conversion-focused Shopify landing page portfolio for Allan Brando B. Catayoc.
+Senior full-stack developer portfolio for Allan Brando B. Catayoc, covering AI tooling, Web3 products, ecommerce frontend, automation, and remote project work.
 
 ## Tech
 
